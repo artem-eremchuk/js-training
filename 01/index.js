@@ -1,5 +1,4 @@
 // ========== Task 1. function fizzBuzz(n) ==========
-const userNumber = Number(prompt('Введите число'));
 
 // v 1.0
 function fizzBuzz(n){
@@ -20,35 +19,22 @@ function fizzBuzz(n){
 }
 
 // v 2.0
-// const userNumber = 15;
-
 // function fizzBuzz(n){
 //     for (let i = 1; i <= n; i++) {
 //         console.log((i % 3 === 0 && i % 5 === 0 && 'FizzBuzz') || (i % 3 === 0 && 'Fizz') || (i % 5 === 0 && 'Buzz') || i);
 //     }
 // }
 
-fizzBuzz(userNumber);
-
 
 
 // ========== Task 2. function toNumber(value) ==========
-const userString = Number(prompt('Введите строку'));
-
 function toNumber(value){
     return (isNaN(value)) ? null : +value;
 }
 
-console.log(toNumber(userString));
-
 
 
 // ========== Task 3. function createUser(name, age, height, weight) ==========
-const name = 'Jordan';
-const age = 57; 
-const height = 198; 
-const weight = 98;
-
 function createUser(name, age, height, weight){
     const userName = (isNaN(name)) ? name : null;
     const userAge = (isNaN(age)) ? null : Number(age);
@@ -60,10 +46,10 @@ function createUser(name, age, height, weight){
     }
     else {
         return {
-            name: typeof userName, 
-            weight: typeof userAge, 
-            age: typeof userHeight, 
-            height: typeof userWeight,  
+            name: userName, 
+            weight: userAge, 
+            age: userHeight, 
+            height: userWeight,  
             skills: {
                 run: (userWeight < 100) ? true : false,
                 volleyball: (userWeight < 90 && userHeight > 185) ? true : false,
@@ -73,22 +59,16 @@ function createUser(name, age, height, weight){
     }
 }
 
-console.log(createUser(name, age, height, weight));
-
 
 
 // ========== Task 4. function isPalindrom(word) ==========
-const userWord =  prompt('Введите слово').toLocaleLowerCase();
-let reverseUserWord = '';
-
 function isPalindrom(word){
+    let reverseUserWord = '';
     for (let i = word.length - 1; i >= 0; i--){
         reverseUserWord += word[i];
     }
     return (reverseUserWord == word) ? true : false;
 }
-
-console.log(isPalindrom(userWord))
 
 
 
@@ -109,8 +89,6 @@ function quadraticEquation(a, b, c){
         return [x1, x2];
     }
 }
-
-console.log(quadraticEquation(1, 6, 1));
 
 
 
@@ -146,5 +124,3 @@ function getCalendar(year, month){
     }
     return monthMatrix;
 }
-
-console.log(getCalendar(2020, 9));
