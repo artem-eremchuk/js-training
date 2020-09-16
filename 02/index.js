@@ -21,7 +21,7 @@ function pow(x, n){
 
 //Task 3. function isEven(n)
 function isEven(n){
-    return n % 2 === 0
+    return n % 2 === 0;
 }
 
 
@@ -111,7 +111,7 @@ function digital_root(num){
         for (let i = 0; i < len; i++){
             sum += Number(strNum[i]);
         }
-        len = String(sum).length;
+        len = Number(String(sum).length);
         strNum = String(sum);
         sum = 0;
     }
