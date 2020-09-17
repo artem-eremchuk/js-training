@@ -33,7 +33,7 @@ function deleteChars(str){
 
 
 
-//Task 5. function deleteChars(str)
+//Task 5. function convertFloor(floor)
 function convertFloor(floor){
     if ((floor >= 0 && floor < 13) || (floor < -13)){
         return floor + 1;
