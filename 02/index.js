@@ -102,12 +102,28 @@ function transformArray(arr, index1, index2, adding){
 
 
 //Task 8. function digital_root(n)
+// function digital_root(num){
+//     let len = Number(String(num).length);
+//     let strNum = String(num);
+//     let sum = 0;
+
+//     for (let j = 0; j < len; j++){
+//         for (let i = 0; i < len; i++){
+//             sum += Number(strNum[i]);
+//         }
+//         len = Number(String(sum).length);
+//         strNum = String(sum);
+//         sum = 0;
+//     }
+//     return Number(strNum);
+// }
+
 function digital_root(num){
     let len = Number(String(num).length);
     let strNum = String(num);
     let sum = 0;
 
-    for (let j = 0; j < len; j++){
+    while(len != 1){
         for (let i = 0; i < len; i++){
             sum += Number(strNum[i]);
         }
