@@ -40,6 +40,7 @@ for(let i = 0; i < names.length; i++){
         li.style.backgroundColor = '#1E90FF';
     }
 
+    // add white color for names
     exitLoops:
     for(let j = 0; j  < names[i].length - 1; j++){
         for(let k = j + 1; k < names[i].length; k++){
@@ -69,6 +70,11 @@ function showMessage(text, color, top, left){
     div.style.padding = '10px';
 
     body.append(div);
+
+    // more 3 message *
+    const mesCnt = document.querySelectorAll('.message');
+    if (mesCnt.length > 3){ mesCnt[0].remove(); }
+
 }
 
 
