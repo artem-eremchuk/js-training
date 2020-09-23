@@ -75,6 +75,15 @@ function showMessage(text, color, top, left){
     const mesCnt = document.querySelectorAll('.message');
     if (mesCnt.length > 3){ mesCnt[0].remove(); }
 
+    // duplicate coordinates **
+    for(let i = 0; i < mesCnt.length - 1; i++){
+        for(let j = i + 1; j < mesCnt.length; j++){
+            if (mesCnt[i].style.left === mesCnt[j].style.left && mesCnt[i].style.top === mesCnt[j].style.top){
+                mesCnt[j].style.left = (parseInt(mesCnt[j].style.left) + 25) + 'px';
+                mesCnt[j].style.top = (parseInt(mesCnt[j].style.top) + 25) + 'px';
+            }
+        }
+    }
 }
 
 
