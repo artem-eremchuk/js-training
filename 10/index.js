@@ -1,4 +1,5 @@
 const date = new Date();
+const currentDay = date.getDate();
 const currentMonth = date.getMonth(); 
 const currentYear = date.getFullYear();
 const firstDay = (new Date(currentYear, currentMonth, 1).getDay() === 0) ? 7 : (new Date(currentYear, currentMonth, 1).getDay());
@@ -21,6 +22,9 @@ for (let day = 1; day <= (daysInThisMonth() + (firstDay - 1)); day++){
     if (firstDay <= day) {
         calendarDayBlock.innerText = (day - (firstDay - 1));
         calendarDayBlock.classList.add('calendar');
+    }
+    if (day === (currentDay + (firstDay - 1))){
+        calendarDayBlock.style.backgroundColor = '#3cb371';
     }
 }
 
