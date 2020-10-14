@@ -90,7 +90,6 @@ function showUsers(users){
             countBalance.innerText = maxBalance(users);
             el.remove();  
         })
-
     })
 }
 
